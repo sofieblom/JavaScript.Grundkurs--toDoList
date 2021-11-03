@@ -39,6 +39,7 @@ body #wrapper h1 {
   height: 15px;
   border: none;
   padding: 10px;
+  margin-bottom: 50px;
 }
 #listContainer #doneBox {
   width: 70%;
