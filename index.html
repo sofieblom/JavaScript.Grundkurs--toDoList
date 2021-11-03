@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/main.js"></script>
     <title>To do list</title>
@@ -13,7 +17,15 @@
       <h1>To do list</h1>
       <div id="listContainer">
         <div id="toDoBox">
-          <input type="text" id="myInput" placeholder="What should I do?" />
+          <div id="inputContainer">
+            <input type="text" id="myInput" placeholder="What should I do?" />
+          </div>
+          <ul>
+            <li>Wake up</li>
+            <li>Make coffee</li>
+            <li>Drink coffee</li>
+            <li>Make some more coffee</li>
+          </ul>
         </div>
         <div id="doneBox"></div>
       </div>
