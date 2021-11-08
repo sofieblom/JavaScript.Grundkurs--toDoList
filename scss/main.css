@@ -3,9 +3,11 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 body #wrapper {
   width: 100%;
 }
+
 body #wrapper h1 {
   text-align: center;
   font-family: "Sofia", Times New Roman, Times, serif;
@@ -14,24 +16,41 @@ body #wrapper h1 {
 #listContainer {
   width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
 }
+
 #listContainer #toDoBox {
   width: 70%;
   height: 400px;
   background-color: rgba(174, 219, 223, 0.171);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
+  -webkit-box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
+          box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
 }
+
 #listContainer #toDoBox #inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #listContainer #toDoBox #inputContainer input {
   background-color: rgba(245, 245, 245, 0.74);
   width: 50%;
@@ -40,34 +59,46 @@ body #wrapper h1 {
   border: none;
   padding: 10px;
   margin-bottom: 50px;
-  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.137);
+  -webkit-box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.137);
+          box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.137);
 }
+
 #listContainer #toDoBox #inputContainer button {
   height: 35px;
   background-color: rgba(245, 245, 245, 0.815);
   border: none;
 }
+
 #listContainer #toDoBox #inputContainer button:hover {
   background-color: rgba(233, 255, 218, 0.815);
 }
+
 #listContainer #toDoBox ul {
   margin: 0;
   padding: 0;
 }
+
 #listContainer #doneBox {
   width: 70%;
   height: 400px;
   background-color: rgba(174, 219, 223, 0.171);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
+  -webkit-box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
+          box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
 }
 
 #headingContainer {
   height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 h3 {
@@ -90,8 +121,13 @@ li:hover {
 @media screen and (min-width: 768px) {
   #listContainer {
     height: 80vh;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #listContainer #toDoBox {
     width: 300px;
@@ -100,3 +136,4 @@ li:hover {
     width: 300px;
   }
 }
+/*# sourceMappingURL=main.css.map */
