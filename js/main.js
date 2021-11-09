@@ -75,18 +75,4 @@ function handleAdd() {
 
   myInput.value = " ";
   myTasks();
-
-  //   let myAddsBox = document.getElementById("myAddsBox");
-  //   let ul = document.createElement("ul");
-  //   let li = document.createElement("li");
-  //   ul.appendChild(li);
-  //   let text = myInput.value;
-  //   li.innerHTML = text;
-
-  //   li.addEventListener("click", function () {
-  //     li.style.textDecoration = "line-through";
-  //     doneBox.appendChild(li);
-  //     // taskContainer.appendChild(li);
-  //     myAddsBox.removeChild(li);
-  //   });
 }

@@ -62,9 +62,13 @@ body #wrapper h1 {
   padding: 20px;
   box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
 }
+#listContainer .doneUl {
+  margin: 0;
+  padding: 0;
+}
 
 #headingContainer {
-  height: 65px;
+  height: 85px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
