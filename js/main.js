@@ -35,8 +35,8 @@ function myTasks() {
   let doneUl = document.createElement("ul");
   doneUl.className = "doneUl";
   myAddsBox.innerHTML = "";
-  myDoneBox.innerHTML = "";
   myAddsBox.appendChild(ul);
+  myDoneBox.innerHTML = "";
   myDoneBox.appendChild(headingContainerDone);
   myDoneBox.appendChild(doneUl);
 
@@ -45,7 +45,8 @@ function myTasks() {
       let li = document.createElement("li");
 
       ul.appendChild(li);
-      li.innerHTML = myToDos[i].todo;
+      li.innerHTML =
+        "<i class='fas fa-angle-double-right'></i>" + " " + myToDos[i].todo;
 
       // Klickhändelse - false blir true
       li.addEventListener("click", function () {
@@ -55,11 +56,16 @@ function myTasks() {
       });
     } else {
       let li = document.createElement("li");
-      li.innerHTML = myToDos[i].todo;
-
-      doneUl.appendChild(li);
+      li.innerHTML = "<i class='far fa-thumbs-up'></i>" + " " + myToDos[i].todo;
 
       li.style.textDecoration = "line-through";
+      doneUl.appendChild(li);
+
+      li.addEventListener("click", function () {
+        myToDos[i].done = !myToDos[i].done;
+
+        myTasks();
+      });
 
       console.log(myToDos[i].done);
     }

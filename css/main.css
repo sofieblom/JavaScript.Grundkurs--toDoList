@@ -22,7 +22,7 @@ body #wrapper h1 {
 }
 #listContainer #toDoBox {
   width: 70%;
-  height: 400px;
+  min-height: 400px;
   background-color: rgba(174, 219, 223, 0.171);
   border-radius: 20px;
   padding: 20px;
@@ -56,7 +56,7 @@ body #wrapper h1 {
 }
 #listContainer #doneBox {
   width: 70%;
-  height: 400px;
+  min-height: 400px;
   background-color: rgba(174, 219, 223, 0.171);
   border-radius: 20px;
   padding: 20px;
