@@ -1,16 +1,47 @@
-body {
-  background-image: url(../assets/luke-chesser-3rWagdKBF7U-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
+html body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(241, 143, 38, 0.6)), to(rgba(60, 15, 78, 0.651)));
+  background: linear-gradient(rgba(241, 143, 38, 0.6), rgba(60, 15, 78, 0.651));
 }
 
-body #wrapper {
+html body #wrapper {
   width: 100%;
 }
 
-body #wrapper h1 {
-  text-align: center;
-  font-family: "Sofia", Times New Roman, Times, serif;
+#inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+}
+
+#inputContainer input {
+  background-color: rgba(245, 245, 245, 0.74);
+  width: 40%;
+  font-size: 14px;
+  height: 15px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.24);
+}
+
+#inputContainer button {
+  height: 35px;
+  background-color: rgba(245, 245, 245, 0.815);
+  border: none;
+}
+
+#inputContainer button:hover {
+  background-color: rgba(60, 15, 78, 0.336);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 #listContainer {
@@ -19,6 +50,7 @@ body #wrapper h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -32,82 +64,107 @@ body #wrapper h1 {
   gap: 20px;
 }
 
-#listContainer #toDoBox {
-  width: 70%;
-  height: 400px;
-  background-color: rgba(174, 219, 223, 0.171);
-  border-radius: 20px;
-  padding: 20px;
-  -webkit-box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
-          box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
-}
-
-#listContainer #toDoBox #inputContainer {
+#listContainer #todoContainer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 
-#listContainer #toDoBox #inputContainer input {
-  background-color: rgba(245, 245, 245, 0.74);
-  width: 50%;
-  font-size: 14px;
-  height: 15px;
-  border: none;
-  padding: 10px;
-  margin-bottom: 50px;
-  -webkit-box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.137);
-          box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.137);
-}
-
-#listContainer #toDoBox #inputContainer button {
-  height: 35px;
-  background-color: rgba(245, 245, 245, 0.815);
-  border: none;
-}
-
-#listContainer #toDoBox #inputContainer button:hover {
-  background-color: rgba(233, 255, 218, 0.815);
-}
-
-#listContainer #toDoBox ul {
-  margin: 0;
-  padding: 0;
-}
-
-#listContainer #doneBox {
+#listContainer #todoContainer #headingContainerAdd {
   width: 70%;
-  height: 400px;
-  background-color: rgba(174, 219, 223, 0.171);
-  border-radius: 20px;
-  padding: 20px;
-  -webkit-box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
-          box-shadow: 6px 6px rgba(22, 22, 71, 0.103);
-}
-
-#listContainer .doneUl {
-  margin: 0;
-  padding: 0;
-}
-
-#headingContainer {
-  height: 85px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(252, 252, 252, 0.034);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.089);
+  padding: 20px;
+  -webkit-box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+          box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+}
+
+#listContainer #todoContainer #myAddsBox {
+  width: 70%;
+  min-height: 400px;
+  background-color: rgba(252, 252, 252, 0.034);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.089);
+  padding: 20px;
+  -webkit-box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+          box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+}
+
+#listContainer #doneContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+#listContainer #doneContainer #headingContainerDone {
+  width: 70%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(252, 252, 252, 0.034);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.089);
+  padding: 20px;
+  -webkit-box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+          box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+}
+
+#listContainer #doneContainer #doneBox {
+  width: 70%;
+  min-height: 400px;
+  background-color: rgba(252, 252, 252, 0.034);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.089);
+  padding: 20px;
+  -webkit-box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
+          box-shadow: 2px 25px 35px rgba(1, 1, 12, 0.308);
 }
 
 h3 {
-  font-size: 20px;
+  text-align: center;
+  font-size: 25px;
   font-family: "Sofia", Times New Roman, Times, serif;
 }
 
@@ -124,21 +181,43 @@ li:hover {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  #inputContainer input {
+    max-width: 200px;
+  }
   #listContainer {
-    height: 80vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 0 auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  #listContainer #toDoBox {
+  #listContainer #todoContainer {
+    width: 350px;
+  }
+  #listContainer #todoContainer #headingContainerAdd {
     width: 300px;
   }
-  #listContainer #doneBox {
+  #listContainer #todoContainer #myAddsBox {
     width: 300px;
+    height: 350px;
+    overflow: scroll;
+  }
+  #listContainer #doneContainer {
+    width: 350px;
+  }
+  #listContainer #doneContainer #headingContainerDone {
+    width: 300px;
+  }
+  #listContainer #doneContainer #doneBox {
+    width: 300px;
+    height: 350px;
+    overflow: scroll;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,9 +9,10 @@ window.onload = function () {
   let button = document.getElementById("myButton");
   button.addEventListener("click", handleAdd);
 
+  // Press Enter
   myInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      handleAdd(); // Press Enter
+      handleAdd();
     }
   });
 
@@ -31,13 +32,11 @@ function myTasks() {
   let myAddsBox = document.getElementById("myAddsBox");
   let ul = document.createElement("ul");
   let myDoneBox = document.getElementById("doneBox");
-  let headingContainerDone = document.getElementById("headingContainer");
   let doneUl = document.createElement("ul");
   doneUl.className = "doneUl";
   myAddsBox.innerHTML = "";
   myAddsBox.appendChild(ul);
   myDoneBox.innerHTML = "";
-  myDoneBox.appendChild(headingContainerDone);
   myDoneBox.appendChild(doneUl);
 
   for (let i = 0; i < myToDos.length; i++) {
@@ -48,7 +47,7 @@ function myTasks() {
       li.innerHTML =
         "<i class='fas fa-angle-double-right'></i>" + " " + myToDos[i].todo;
 
-      // Klickhändelse - false blir true
+      // Klickhändelse - boolean
       li.addEventListener("click", function () {
         myToDos[i].done = !myToDos[i].done;
 
@@ -61,13 +60,12 @@ function myTasks() {
       li.style.textDecoration = "line-through";
       doneUl.appendChild(li);
 
+      // Klickhändelse - boolean
       li.addEventListener("click", function () {
         myToDos[i].done = !myToDos[i].done;
 
         myTasks();
       });
-
-      console.log(myToDos[i].done);
     }
   }
 }
@@ -78,6 +76,7 @@ function handleAdd() {
 
   let td6 = new ToDo(myInput.value);
   myToDos.push(td6);
+  td6.id = "td6";
 
   myInput.value = " ";
   myTasks();
